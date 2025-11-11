@@ -37,74 +37,7 @@
           </div>
 
           <!-- Modo de preparación -->
-          <button 
-            @click="expandedModo = !expandedModo"
-            :class="['btn', 'btn-expand', { 'btn-expand-open': expandedModo }]"
-          >
-            <span class="btn-text">Modo de preparación</span>
-            <span class="btn-arrow">▼</span>
-          </button>
-
-          <div v-if="expandedModo" class="expanded-text">
-            <p class="prep-intro">
-              Relación sugerida: <strong>8–10 g</strong> (1 cucharada copeteada) por <strong>180–200 ml</strong> de agua. 
-              Ajusta a tu gusto.
-            </p>
-
-            <div class="steps-grid">
-              <!-- Paso 1 -->
-              <div class="step-card">
-                <div class="step-icon-wrap">
-                  <!-- Olla hirviendo -->
-                  <svg class="step-icon" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M4 9h16v7a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V9z" fill="currentColor" />
-                    <rect x="2" y="9" width="20" height="2" rx="1" />
-                    <path d="M7 4c0 1 .8 1.5.8 2.5S7 8 7 9M11 4c0 1 .8 1.5.8 2.5S11 8 11 9M15 4c0 1 .8 1.5.8 2.5S15 8 15 9" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-                  </svg>
-                </div>
-                <h4 class="step-title">1) Hervir</h4>
-                <p class="step-text">
-                  Calienta el agua hasta ebullición suave. Para olla, baja el fuego al romper hervor.
-                </p>
-              </div>
-
-              <!-- Paso 2 -->
-              <div class="step-card">
-                <div class="step-icon-wrap">
-                  <!-- Cuchara con grano -->
-                  <svg class="step-icon" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M13 5c2.2 0 4 1.8 4 4 0 1.5-.8 2.8-2 3.5l-6.6 4.1a3 3 0 1 1-3.4-5l6.7-4.1c.4-.3.9-.5 1.3-.5z" fill="currentColor"/>
-                    <circle cx="6" cy="17" r="1.8" />
-                  </svg>
-                </div>
-                <h4 class="step-title">2) Añadir café</h4>
-                <p class="step-text">
-                  Agrega <strong>8–10 g</strong> por taza, mezcla suavemente.
-                  <br/>Azúcar o piloncillo <em>al gusto</em>. Opcional: una pizca de canela.
-                </p>
-              </div>
-
-              <!-- Paso 3 -->
-              <div class="step-card">
-                <div class="step-icon-wrap">
-                  <!-- Taza / reloj -->
-                  <svg class="step-icon" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M5 8h9a4 4 0 0 1 0 8H9a4 4 0 0 1-4-4V8z" fill="currentColor"/>
-                    <path d="M18 10a3 3 0 1 1 0 6h-1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-                    <path d="M12 6v2M12 6a3 3 0 1 1 0 6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-                  </svg>
-                </div>
-                <h4 class="step-title">3) Esperar & disfrutar</h4>
-                <p class="step-text">
-                  Deja infusionar <strong>3–5 min</strong>. Apaga, cuela si prefieres, sirve caliente y ¡disfruta!
-                </p>
-              </div>
-            </div>
-
-            <p class="prep-note">
-              <strong>Tip:</strong> Si usas cafetera de filtro, coloca el café en el porta-filtros y vierte el agua caliente lentamente en círculos.
-            </p>
-          </div>
+        
 
         
           <!-- Ventajas de ser distribuidor -->
@@ -117,13 +50,13 @@
           </button>
           <div v-if="expandedDistribuidor" class="expanded-text">
             <ul>
-              <li><strong>Margen competitivo:</strong> descuentos por volumen y precios preferenciales.</li>
-              <li><strong>Soporte comercial:</strong> material POP, fotos y apoyo en marketing.</li>
-              <li><strong>Envíos rápidos:</strong> logística ágil para reposición constante.</li>
-              <li><strong>Producto local y de calidad:</strong> diferenciador en tu oferta con café orgánico de Veracruz.</li>
-              <li><strong>Flexibilidad:</strong> pedidos personalizados y condiciones según mercado.</li>
+              <li><strong>SIN INVERSIÓN INICIAL:</strong> Nosotros ponemos el productor en tu tienda a consignación</li>
+              <li><strong>ESPACIO LISTO:</strong> Una estantería dedicada para el café Las Mesitas</li>
+              <li><strong>RESPUESTA INMEDIATA:</strong> Tu pedido lo más rápido posible.</li>
+              <li><strong>PRODUCTO DE ALTA CALIDAD:</strong> Nuestra calidad habla por nosotros y todos nuestros clientes nos recomiendan</li>
+              <li><strong>SUPER PRECIO:</strong> Los mejores precios del mercado</li>
             </ul>
-            <p style="margin-top:0.5rem;">Si quieres recibir la lista de precios y condiciones, haz click en "Quiero ser distribuidor!" arriba.</p>
+            <p style="margin-top:0.5rem;">Si quieres distribuir el mejor café de la región de Veracruz, haz click abajo</p>
 
               <a
   href="https://wa.me/5214432401831?text=Hola%2C%20me%20gustar%C3%ADa%20distribuir%20su%20producto%20en%20mi%20tienda"
@@ -146,6 +79,7 @@
 
       <!-- Swiper / carrusel de imágenes -->
       <div class="gallery-container">
+        <h2 class="subtitle">Proceso de preparación</h2>
         <div
           class="swiper-container"
           ref="swiper"
@@ -155,9 +89,10 @@
           @mousedown.prevent="onMouseDown"
         >
           <div class="swiper-track" :style="trackStyle">
-            <div class="slide" v-for="(src, i) in gallery" :key="i">
-              <img :src="src" :alt="`Imagen ${i + 1}`" />
-            </div>
+            <div class="slide" v-for="(item, i) in gallery" :key="i">
+  <img :src="item.src" :alt="item.tag" />
+  <div class="tag">{{ item.tag }}</div>
+</div>
           </div>
         </div>
 
@@ -186,12 +121,13 @@ const expandedModo = ref(true) // ábrelo por defecto si quieres
 const expandedDistribuidor = ref(false)
 
 // Galería de solo lectura: reemplaza con tus rutas de imagen en /public o carpeta estática
+
+
 const gallery = ref([
-  '/logo-las-mesitas.jpeg',
-  '/logo-las-mesitas-2.jpeg',
-  '/logo-las-mesitas-3.jpeg',
-  '/logo-las-mesitas-4.jpeg',
-  '/logo-las-mesitas-5.jpeg'
+  { src: '/hervir.webp', tag: 'Hervir 2 litros de agua' },
+  { src: '/agregar.webp', tag: 'Añade dos cucharadas de café Las Mesitas' },
+  { src: '/reservar.webp', tag: 'Espera 15 min' },
+  { src: '/servir.webp', tag: 'Distruta tu delicioso café' },
 ])
 
 const current = ref(0)
@@ -294,6 +230,26 @@ function onMouseUp() {
 }
 
 .card-content { padding: 3rem 1.5rem 2rem; color: white; }
+
+/* Etiqueta sobre cada imagen */
+.tag {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.6rem;
+  font-weight: 500;
+  backdrop-filter: blur(4px);
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+}
+.slide {
+  position: relative;
+}
 
 .badge-container { width: 100%; display: flex; justify-content: center; margin-bottom: 1.5rem; }
 .badge {
@@ -414,6 +370,7 @@ function onMouseUp() {
   gap: 0.5rem;
   justify-content: center;
   margin-top: 0.75rem;
+  object-fit: fill;
 }
 
 .dot {
